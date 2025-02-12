@@ -3,7 +3,20 @@ let user = {}
 // let useremail = "";
 // let username = "";
 // let currBalance = 0;
+
 document.write("<div id=root></div>");
+function toggle(color){
+if(color == "dark")
+{
+  document.body.style.background="black";
+  document.body.style.color= "white";
+}
+else
+{
+  document.body.style.background="white";
+  document.body.style.color= "black";
+}
+}
 function showUser() {
   if (document.getElementById("type").value == "3") {
     console.log("Transfer")
@@ -53,7 +66,7 @@ function saveData() {
 }
 function home() {
   let str = `
-      <h3>Welcome ${user.name}</h3>
+      <h3>Welcome,${user.name} <3 </h3>
       <button onclick='showLogin()'>Logout</button>
       <p><select id="type" onchange='showUser()'>
          <option value=0>--Select--</option>
